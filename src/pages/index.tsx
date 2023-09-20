@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           {selectedColor &&
             <p className="flex flex-col items-center justify-center text-stone-700">
-              You've selected: <br />
+              You&apos;ve selected: <br />
               <span className={`text-stone-950 rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl px-1 ${myColors[selectedColor]?.highlight ?? ''}`}>
                 {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
               </span>
