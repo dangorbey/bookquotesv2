@@ -48,7 +48,7 @@ const myColors: Record<string, ColorDefinition> = {
 };
 
 export default function Home() {
-  const [selectedColor, setSelectedColor] = useState<string | null>(null);
+  const [selectedColor, setSelectedColor] = useState<string>("amber");
 
   return (
     <>
@@ -62,11 +62,15 @@ export default function Home() {
           <div className="max-w-md text-stone-900">
           </div>
           {selectedColor &&
-            <p className={`rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl ${myColors[selectedColor]?.highlight ?? ''}`}>
-              You&apos;ve selected: {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
+            <p className="flex flex-col items-center justify-center text-stone-700">
+              You've selected: <br />
+              <span className={`text-stone-950 rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl px-1 ${myColors[selectedColor]?.highlight ?? ''}`}>
+                {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
+              </span>
             </p>
+          }
 
-          }          <div className="flex space-x-4">
+          <div className="flex space-x-4">
             {Object.entries(myColors).map(([label, colorDef], index) => (
               <button
                 key={index}
