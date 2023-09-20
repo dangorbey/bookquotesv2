@@ -62,9 +62,10 @@ export default function Home() {
           <div className="max-w-md text-stone-900">
           </div>
           {selectedColor &&
-            <p className={`rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl ${myColors[selectedColor]?.highlight || ''}`}>
-              You've selected: {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
+            <p className={`rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl ${myColors[selectedColor]?.highlight ?? ''}`}>
+              You&apos;ve selected: {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
             </p>
+
           }          <div className="flex space-x-4">
             {Object.entries(myColors).map(([label, colorDef], index) => (
               <button
