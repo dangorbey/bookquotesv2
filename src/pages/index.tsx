@@ -2,7 +2,8 @@ import Head from "next/head";
 import { useState } from 'react';
 import GradientButton from "./components/GradientButton";
 import HighlightedText from "./components/HighlightedText";
-import { Color, colorConfig, gradients } from "./components/colorConfig";
+import type { Color } from "./components/colorConfig";
+import { colorConfig, gradients } from "./components/colorConfig";
 
 export default function Home() {
 

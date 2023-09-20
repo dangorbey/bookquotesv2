@@ -1,13 +1,12 @@
 export type Color = 'amber' | 'lime' | 'orange' | 'pink' | 'cyan';
 
-type ColorConfigType = {
-  [color: string]: {
-    gradient: string;
-    base: string;
-    hover: string;
-    active: string;
-  };
-};
+type ColorConfigType = Record<string, {
+  gradient: string;
+  base: string;
+  hover: string;
+  active: string;
+}>;
+
 
 export const colorConfig: ColorConfigType = {
   amber: {

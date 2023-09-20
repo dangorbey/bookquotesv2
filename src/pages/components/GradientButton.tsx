@@ -1,5 +1,6 @@
 import React from 'react';
-import { gradients, Color } from './colorConfig';
+import type { Color } from './colorConfig';
+import { gradients } from './colorConfig';
 
 type GradientButtonProps = {
   color: Color;
