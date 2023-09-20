@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import { myColors } from "./colors";
+import { myColors } from "../../config/colors";
 
 // interface ColorDefinition {
 //   highlight: string;

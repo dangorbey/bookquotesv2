@@ -43,5 +43,3 @@ export const myColors: Record<string, ColorDefinition> = {
     active: "border-2 border-pink-400",
   },
 };
-
-export default myColors;
