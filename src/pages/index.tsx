@@ -14,6 +14,7 @@ export default function Home() {
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
         <div className="container flex flex-col items-center justify-center gap-6 px-4 py-16 ">
+
           {selectedColor &&
             <p className="flex flex-col items-center justify-center text-stone-700">
               You&apos;ve selected: <br />
@@ -22,7 +23,9 @@ export default function Home() {
               </span>
             </p>
           }
+
           <hr className="w-full md:max-w-sm border-stone-200" />
+
           <div className="flex space-x-4">
             {Object.entries(myColors).map(([label, colorDef], index) => (
               <button
@@ -32,6 +35,7 @@ export default function Home() {
               />
             ))}
           </div>
+
         </div>
       </main>
     </>
