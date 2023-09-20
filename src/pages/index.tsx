@@ -61,8 +61,11 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
           <div className="max-w-md text-stone-900">
           </div>
-          {selectedColor && <p>You've selected: {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}</p>}
-          <div className="flex space-x-4">
+          {selectedColor &&
+            <p className={`rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl ${myColors[selectedColor]?.highlight || ''}`}>
+              You've selected: {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
+            </p>
+          }          <div className="flex space-x-4">
             {Object.entries(myColors).map(([label, colorDef], index) => (
               <button
                 key={index}
