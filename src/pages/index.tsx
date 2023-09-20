@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
-import { myColors } from "./utils/colors";
+import { myColors } from "../../colors";
 
 export default function Home() {
   const [selectedColor, setSelectedColor] = useState<string>("amber");
