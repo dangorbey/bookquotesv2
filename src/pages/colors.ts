@@ -5,7 +5,7 @@ interface ColorDefinition {
   active: string;
 }
 
-const myColors: Record<string, ColorDefinition> = {
+export const myColors: Record<string, ColorDefinition> = {
   amber: {
     highlight: "bg-gradient-to-r from-amber-200 from-10% via-amber-100 via-30% to-amber-300 to-90%",
     base: "bg-amber-200",
