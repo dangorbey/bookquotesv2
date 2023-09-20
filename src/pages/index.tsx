@@ -58,18 +58,16 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="flex min-h-screen flex-col items-center justify-center">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16 ">
-          <div className="max-w-md text-stone-900">
-          </div>
+        <div className="container flex flex-col items-center justify-center gap-6 px-4 py-16 ">
           {selectedColor &&
             <p className="flex flex-col items-center justify-center text-stone-700">
               You&apos;ve selected: <br />
-              <span className={`text-stone-950 rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl px-1 ${myColors[selectedColor]?.highlight ?? ''}`}>
+              <span className={`text-stone-950 rounded-tl-xl rounded-bl-md rounded-tr-md rounded-br-2xl px-2 ${myColors[selectedColor]?.highlight ?? ''}`}>
                 {selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1)}
               </span>
             </p>
           }
-
+          <hr className="w-full md:max-w-sm border-stone-200" />
           <div className="flex space-x-4">
             {Object.entries(myColors).map(([label, colorDef], index) => (
               <button
